@@ -11,7 +11,9 @@ public class Jugador : MonoBehaviour
 
     public float tiempo;
     public float maxTiempo; //Tiempo de espera para regenerar la vida.
-    
+
+    public bool godMode;
+
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
@@ -23,6 +25,11 @@ public class Jugador : MonoBehaviour
         {
             Regeneracion();
         }
+
+        if (Input.GetKeyDown(KeyCode.O)) // Para activar/desactivar el GodMode, pulsa O.
+        {
+            godMode = !godMode;
+        } 
     }
 
     private void Regeneracion() // Cuando termine el tiempo, los puntos de vida comenzaran a subir de 1 en 1;
@@ -47,11 +54,14 @@ public class Jugador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemigoUno"))
         {
-            vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
-
-            if (vida <= 0 )
+            if (godMode == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
-                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
+
+                if (vida <= 0)
+                {
+                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                }
             }
         }
     }
