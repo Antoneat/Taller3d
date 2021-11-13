@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Monedas
   - EnemigoUno
+  - Moneda
+  - walls
   layers:
   - Default
   - TransparentFX
