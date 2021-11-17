@@ -29,7 +29,7 @@ public class Jugador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O)) // Para activar/desactivar el GodMode, pulsa O.
         {
             godMode = !godMode;
-        } 
+        }
     }
 
     private void Regeneracion() // Cuando termine el tiempo, los puntos de vida comenzaran a subir de 1 en 1;

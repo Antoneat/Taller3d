@@ -9,12 +9,19 @@ public class Enemigo : MonoBehaviour
 
     void Start()
     {
-        
+        vida = 1;
     }
-
 
     void Update()
     {
-        
+        Muerte();
+    }
+
+    private void Muerte()
+    {
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
