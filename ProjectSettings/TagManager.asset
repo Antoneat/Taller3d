@@ -7,6 +7,9 @@ TagManager:
   - EnemigoUno
   - Moneda
   - walls
+  - caida
+  - obstaculo
+  - obsDesdeA
   layers:
   - Default
   - TransparentFX

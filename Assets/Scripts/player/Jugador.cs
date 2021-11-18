@@ -10,17 +10,20 @@ public class Jugador : MonoBehaviour
 
     public float tiempo;
     public float maxTiempo; //Tiempo de espera para regenerar la vida.
-    
+
     public bool godMode; // Modo Dios
+
+    MovPlayer mp;
 
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
+        
     }
 
     private void Update()
     {
-        if(vida < maxVida) //Cuando la vida este igual o mayor a 1 este empezara con un cuenta atras que activara la regeneracion.
+        if (vida < maxVida) //Cuando la vida este igual o mayor a 1 este empezara con un cuenta atras que activara la regeneracion.
         {
             Regeneracion();
         }
@@ -43,7 +46,7 @@ public class Jugador : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.CompareTag("Moneda"))
+        if (collider.gameObject.CompareTag("Moneda"))
         {
             ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
@@ -54,7 +57,7 @@ public class Jugador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemigoUno"))
         {
-            if (godMode == false) // Si en godmode esta desactivado, hará lo de abajo.
+            if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
                 vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
 
@@ -64,5 +67,24 @@ public class Jugador : MonoBehaviour
                 }
             }
         }
+
+        if (collision.gameObject.CompareTag("caida"))
+        {
+            if (godMode == false) // Si en godmode esta desactivado, hará lo de abajo.
+            {
+                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+            }
+        }
+
+        if (collision.gameObject.CompareTag("obsDesdeA"))
+        {
+           vida--;
+            if (vida <= 0)
+            {
+                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+            }
+        }
+
     }
 }
+

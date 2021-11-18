@@ -7,6 +7,7 @@ public class modelChange : MonoBehaviour
 
     public GameObject model1;
     public GameObject model2;
+    public GameObject model3;
 
     void Start()
     {

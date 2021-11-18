@@ -13,7 +13,7 @@ public class MovPlayer : MonoBehaviour
     public float NumberJumps = 0f;
     public float MaxJumps = 1;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     public float dashSpeed;
     public bool isDashing;
@@ -36,10 +36,13 @@ public class MovPlayer : MonoBehaviour
     public float timeForSlide;
     public float maxTimeForSlide;
 
-    public float modCRate = 1f;
+    public bool isBouncing;
+
+    public float modCRate = 0.5f;
     private float modChange = 0.0f;
 
     modelChange modCha;
+    Jugador ju;
 
     void Start()
     {
@@ -47,21 +50,36 @@ public class MovPlayer : MonoBehaviour
         modCha = GetComponent<modelChange>();
         modCha.model1.SetActive(true);
 
+        ju = GetComponent<Jugador>();
+
         currentDashing = maxDashing;
         currentSliding = maxSliding;
         dashBar.SetMaxDash(maxDashing);
         slideBar.SetMaxSlide(maxSliding);
+
+        isBouncing = false;
     }
   
     void FixedUpdate()
     {
-        transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
-        if(isDashing)
+        //transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
+        rb.transform.position += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
+        if (isDashing)
         {
             Dash();
+            modCha.model1.SetActive(false);
+            modCha.model3.SetActive(true);
+            isDashing = false;
             currentDashing = 0;
             dashBar.SetDash(currentDashing);
         }
+        else if (Time.time > modChange)
+        {
+            modChange = Time.time + modCRate;
+            modCha.model1.SetActive(true);
+            modCha.model3.SetActive(false);
+        }
+
 
         if (isSliding)
         {
@@ -78,6 +96,8 @@ public class MovPlayer : MonoBehaviour
             modCha.model1.SetActive(true);
             modCha.model2.SetActive(false);
         }
+
+            if (!isBouncing) rb.MovePosition(rb.position + Vec * speed * Time.fixedDeltaTime);
     }
 
     void Update()
@@ -135,7 +155,7 @@ public class MovPlayer : MonoBehaviour
     void Dash()
     {
             rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
-            isDashing = false;
+            isDashing = true;
     }
 
     void Slide()
@@ -175,11 +195,33 @@ public class MovPlayer : MonoBehaviour
             isGrounded = true;
         }
 
+
         NumberJumps = 0;
+
+
+        if (other.gameObject.CompareTag("obstaculo"))
+        {
+            float bounce = 1200f; //cant d fuerza aplicada al bounce
+            rb.AddForce(other.contacts[0].normal * bounce);
+            isBouncing = true;
+            Invoke("StopBounce", 1.5f);
+            
+            if (ju.vida <= 0)
+            {
+                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+            }
+        }
+    }
+
+    void StopBounce()
+    {
+        isBouncing = false;
     }
 
     void OnCollisionExit(Collision other)
     {
 
     }
+
+
 }
