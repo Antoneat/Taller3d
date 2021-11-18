@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
     public int maxVida;  // Vida máxima del jugador.
     public int vida;     // Variable de vida donde utilizará posteriormente para la recuperación de vida después de un tiempo.
 
-    public int puntaje; // Variable que acumulará el total de el valor de las monedas recolectadas. 
-
     public float tiempo;
     public float maxTiempo; //Tiempo de espera para regenerar la vida.
-
-    public bool godMode;
+    
+    public bool godMode; // Modo Dios
 
     private void Start()
     {
@@ -41,11 +40,12 @@ public class Jugador : MonoBehaviour
             tiempo = 0;
         }
     }
+
     private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.CompareTag("Moneda"))
         {
-            puntaje = puntaje + 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
         }
     }

@@ -18,8 +18,23 @@ public class MovPlayer : MonoBehaviour
     public float dashSpeed;
     public bool isDashing;
 
+    public int maxDashing = 3;
+    public int currentDashing;
+
+    public float timeForDash;
+    public float maxTimeForDash;
+
+    public DashBar dashBar;
+    public SlideBar slideBar;
+
     public float slideSpeed;
     public bool isSliding;
+
+    public int maxSliding = 3;
+    public int currentSliding;
+
+    public float timeForSlide;
+    public float maxTimeForSlide;
 
     public float modCRate = 1f;
     private float modChange = 0.0f;
@@ -31,14 +46,21 @@ public class MovPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         modCha = GetComponent<modelChange>();
         modCha.model1.SetActive(true);
-    }
 
+        currentDashing = maxDashing;
+        currentSliding = maxSliding;
+        dashBar.SetMaxDash(maxDashing);
+        slideBar.SetMaxSlide(maxSliding);
+    }
+  
     void FixedUpdate()
     {
         transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
         if(isDashing)
         {
             Dash();
+            currentDashing = 0;
+            dashBar.SetDash(currentDashing);
         }
 
         if (isSliding)
@@ -46,6 +68,9 @@ public class MovPlayer : MonoBehaviour
             Slide();
             modCha.model1.SetActive(false);
             modCha.model2.SetActive(true);
+
+            currentSliding = 0;
+            slideBar.SetSlide(currentSliding);
         }
         else if (Time.time > modChange) 
         {
@@ -60,14 +85,26 @@ public class MovPlayer : MonoBehaviour
         Move();
         Jump();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && currentDashing==3)
         {
             isDashing = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && isDashing==false && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.S) && isDashing == false && isGrounded == true && currentSliding == 3)
         {
             isSliding = true;
+        }
+
+        if (currentDashing < maxDashing)
+        {
+            RegeneracionDash();
+            dashBar.SetDash(currentDashing);
+        }
+
+        if (currentSliding < maxSliding)
+        {
+            RegeneracionSlide();
+            slideBar.SetSlide(currentSliding);
         }
     }
 
@@ -105,6 +142,26 @@ public class MovPlayer : MonoBehaviour
     {
         rb.AddForce(transform.forward * slideSpeed, ForceMode.Impulse);
         isSliding = false;
+    }
+
+    private void RegeneracionDash()
+    {
+        timeForDash = timeForDash + Time.deltaTime;
+        if (timeForDash >= maxTimeForDash)
+        {
+            currentDashing++;
+            timeForDash = 0;
+        }
+    }
+
+    private void RegeneracionSlide()
+    {
+        timeForSlide = timeForSlide + Time.deltaTime;
+        if (timeForSlide >= maxTimeForSlide)
+        {
+            currentSliding++;
+            timeForSlide = 0;
+        }
     }
 
     void OnCollisionEnter(Collision other)
