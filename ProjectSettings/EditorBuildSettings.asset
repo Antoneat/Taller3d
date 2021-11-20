@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Pruebas.unity
-    guid: a699f575bcefbdd449f108b8a800081f
+    path: Assets/Scenes/Inicio.unity
+    guid: 8f89ba0fd48ddff468a213ea6576cf8f
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: f2bed178aba72cc408e5b378383783ab
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel4.unity
     guid: 4a6b4bd005cb9f542b82e86223a12cef
+  - enabled: 1
+    path: Assets/Scenes/Pruebas.unity
+    guid: a699f575bcefbdd449f108b8a800081f
   m_configObjects: {}
