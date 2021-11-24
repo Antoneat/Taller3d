@@ -42,7 +42,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -121,6 +121,7 @@ Transform:
   - {fileID: 4431613693950784265}
   - {fileID: 4431613694666417934}
   - {fileID: 4431613692949382496}
+  - {fileID: 974261787988833860}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,12 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a867679402bb341899fa062bfa0c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoMovSpeed: 8
-  speed: 8
+  AutoMovSpeed: 18
+  speed: 15
   jumpHeight: 400
   isGrounded: 0
   NumberJumps: 0
   MaxJumps: 1
+  rb: {fileID: 0}
   dashSpeed: 8
   isDashing: 0
   maxDashing: 3
@@ -249,10 +251,13 @@ MonoBehaviour:
   slideBar: {fileID: 0}
   slideSpeed: 8
   isSliding: 0
+  slidePos: {fileID: 5215323073657306735}
+  slideVFX: {fileID: 718661294486973496, guid: 8ddb300cc301c164e8a75bea38c50dba, type: 3}
   maxSliding: 3
   currentSliding: 0
   timeForSlide: 0
   maxTimeForSlide: 1
+  isBouncing: 0
   modCRate: 2
 --- !u!114 &4431613693264781933
 MonoBehaviour:
@@ -560,3 +565,33 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5215323073657306735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974261787988833860}
+  m_Layer: 0
+  m_Name: slidePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974261787988833860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215323073657306735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4431613693264781935}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

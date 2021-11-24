@@ -29,6 +29,8 @@ public class MovPlayer : MonoBehaviour
 
     public float slideSpeed;
     public bool isSliding;
+    public GameObject slidePos;
+    public GameObject slideVFX;
 
     public int maxSliding = 3;
     public int currentSliding;
@@ -160,6 +162,9 @@ public class MovPlayer : MonoBehaviour
 
     void Slide()
     {
+        GameObject obj = Instantiate(slideVFX);
+        obj.transform.position = slidePos.transform.position;
+        obj.transform.parent = slidePos.transform;
         rb.AddForce(transform.forward * slideSpeed, ForceMode.Impulse);
         isSliding = false;
     }
