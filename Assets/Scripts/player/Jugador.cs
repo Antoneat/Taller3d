@@ -15,6 +15,11 @@ public class Jugador : MonoBehaviour
 
     MovPlayer mp;
 
+    public GameObject MonedaParticula;
+    public GameObject particulaMoneda;
+
+    public GameObject RegenDeVida;
+
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
@@ -26,6 +31,11 @@ public class Jugador : MonoBehaviour
         if (vida < maxVida) //Cuando la vida este igual o mayor a 1 este empezara con un cuenta atras que activara la regeneracion.
         {
             Regeneracion();
+
+        }
+        if(vida==maxVida)
+        {
+            RegenDeVida.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.O)) // Para activar/desactivar el GodMode, pulsa O.
@@ -40,6 +50,7 @@ public class Jugador : MonoBehaviour
         if (tiempo >= maxTiempo)
         {
             vida++;
+            RegenDeVida.SetActive(true);
             tiempo = 0;
         }
     }
@@ -50,6 +61,7 @@ public class Jugador : MonoBehaviour
         {
             ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
+            MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
     }
 
