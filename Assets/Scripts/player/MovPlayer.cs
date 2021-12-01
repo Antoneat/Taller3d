@@ -18,6 +18,8 @@ public class MovPlayer : MonoBehaviour
     public float dashSpeed;
     public bool isDashing;
 
+    public bool dashCollision;
+
     public int maxDashing = 3;
     public int currentDashing;
 
@@ -62,6 +64,17 @@ public class MovPlayer : MonoBehaviour
         isBouncing = false;
     }
   
+    IEnumerator isAttacking()
+    {
+        dashCollision = true;
+
+        yield return new WaitForSeconds(2);
+
+        dashCollision = false;
+
+        yield return null;
+    }
+
     void FixedUpdate()
     {
         //transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
@@ -69,6 +82,7 @@ public class MovPlayer : MonoBehaviour
         if (isDashing)
         {
             Dash();
+            StartCoroutine(isAttacking());
             modCha.model1.SetActive(false);
             modCha.model3.SetActive(true);
             isDashing = false;
