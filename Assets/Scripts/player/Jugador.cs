@@ -20,6 +20,11 @@ public class Jugador : MonoBehaviour
 
     public GameObject RegenDeVida;
 
+    public GameObject RecibiendoDmg;
+    public GameObject particulaDmg;
+
+    public Image BarraDeScore;
+
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
@@ -60,6 +65,7 @@ public class Jugador : MonoBehaviour
         if (collider.gameObject.CompareTag("Moneda"))
         {
             ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            BarraDeScore.fillAmount += (ScoreText.puntaje/1000); 
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
             MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
@@ -72,6 +78,7 @@ public class Jugador : MonoBehaviour
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
                 vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
+                RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);
 
                 if (vida <= 0)
                 {
@@ -90,7 +97,9 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.CompareTag("obsDesdeA"))
         {
-           vida--;
+            vida--;
+            RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);
+
             if (vida <= 0)
             {
                 Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
