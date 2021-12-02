@@ -321,6 +321,7 @@ MonoBehaviour:
   RegenDeVida: {fileID: 2413252316017952259}
   RecibiendoDmg: {fileID: 630693561}
   particulaDmg: {fileID: 5065959984406371721, guid: c815374544a89cb489381555c457fb1f, type: 3}
+  BarraDeScore: {fileID: 0}
 --- !u!114 &4431613693264781934
 MonoBehaviour:
   m_ObjectHideFlags: 0
