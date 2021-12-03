@@ -10,6 +10,9 @@ TagManager:
   - caida
   - obstaculo
   - obsDesdeA
+  - pasarLVL1
+  - pasarLVL2
+  - pasarLVL3
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Jugador : MonoBehaviour
 {
@@ -106,6 +107,20 @@ public class Jugador : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.tag == "pasarLVL1")
+        {
+            SceneManager.LoadScene("Nivel2");
+        }
+
+        if (collision.gameObject.tag == "pasarLVL2")
+        {
+            SceneManager.LoadScene("Nivel3");
+        }
+
+        if (collision.gameObject.tag == "pasarLVL3")
+        {
+            SceneManager.LoadScene("Nivel4");
+        }
     }
 }
 

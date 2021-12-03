@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 2469648568650332770}
   - component: {fileID: 2469648568650332769}
   - component: {fileID: 2469648568650332768}
-  - component: {fileID: 2469648568650332772}
-  - component: {fileID: 3007060446758546414}
-  - component: {fileID: -6117227213396659949}
+  - component: {fileID: 3538723536894877119}
   m_Layer: 0
   m_Name: Enemigo2
   m_TagString: EnemigoUno
@@ -114,61 +112,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 0
   mp: {fileID: 0}
---- !u!95 &2469648568650332772
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469648568650332782}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7dff48ef9576128448b17fd605d72926, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3007060446758546414
+--- !u!114 &3538723536894877119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2469648568650332782}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59a37cfe33e9764d9e29bce70f899ac, type: 3}
+  m_Script: {fileID: 11500000, guid: f7a1cc2e7415fb040ab8c90b9b435028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
-  navPoint: []
-  agent: {fileID: 0}
-  destPoint: 0
-  goal: {fileID: 0}
---- !u!195 &-6117227213396659949
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469648568650332782}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  pointB: {x: 0, y: 8, z: 0}
