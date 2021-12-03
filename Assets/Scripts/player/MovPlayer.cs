@@ -17,8 +17,6 @@ public class MovPlayer : MonoBehaviour
 
     public float dashSpeed;
     public bool isDashing;
-    public GameObject dashVFX;
-    public GameObject dashPos;
 
     public bool dashCollision;
 
@@ -172,10 +170,7 @@ public class MovPlayer : MonoBehaviour
 
     void Dash()
     {
-        GameObject obj = Instantiate(dashVFX);
-        obj.transform.position = dashPos.transform.position;
-        obj.transform.parent = dashPos.transform;
-        rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
             isDashing = true;
     }
 
