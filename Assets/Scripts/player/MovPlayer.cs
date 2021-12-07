@@ -17,6 +17,8 @@ public class MovPlayer : MonoBehaviour
 
     public float dashSpeed;
     public bool isDashing;
+    public GameObject dashPos;
+    public GameObject dashVFX;
 
     public bool dashCollision;
 
@@ -47,6 +49,8 @@ public class MovPlayer : MonoBehaviour
 
     modelChange modCha;
     Jugador ju;
+
+    public Animator anim;
 
     void Start()
     {
@@ -92,8 +96,8 @@ public class MovPlayer : MonoBehaviour
         else if (Time.time > modChange)
         {
             modChange = Time.time + modCRate;
-            modCha.model1.SetActive(true);
             modCha.model3.SetActive(false);
+            modCha.model1.SetActive(true);
         }
 
 
@@ -170,8 +174,11 @@ public class MovPlayer : MonoBehaviour
 
     void Dash()
     {
-            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
-            isDashing = true;
+        GameObject obj = Instantiate(dashVFX);
+        obj.transform.position = dashPos.transform.position;
+        obj.transform.parent = dashPos.transform;
+        rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+        isDashing = true;
     }
 
     void Slide()
@@ -220,6 +227,7 @@ public class MovPlayer : MonoBehaviour
 
         if (other.gameObject.CompareTag("obstaculo"))
         {
+            anim.SetTrigger("Tired");
             float bounce = 1200f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.53293073, g: 0.62221986, b: 0.69100595, a: 1}
+  m_IndirectSpecularColor: {r: 0.6012449, g: 0.89418703, b: 1.0263084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34916703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 502834242, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+  m_PrefabInstance: {fileID: 697561564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262365232
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +734,14 @@ PrefabInstance:
       propertyPath: dashBar
       value: 
       objectReference: {fileID: 849246504}
+    - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: dashPos
+      value: 
+      objectReference: {fileID: 34916703}
+    - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: dashVFX
+      value: 
+      objectReference: {fileID: 2977785436140431086, guid: c572ecceeaaad9d4493e84290f4f1739, type: 3}
     - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: slideBar
       value: 
