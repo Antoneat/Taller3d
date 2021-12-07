@@ -26,6 +26,13 @@ public class Jugador : MonoBehaviour
 
     public Image BarraDeScore;
 
+    public GameObject ResultLvl;
+    public GameObject DerrotaLvl;
+    public GameObject imgBronce;
+    public GameObject imgSilver;
+    public GameObject imgGold;
+
+
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
@@ -97,7 +104,27 @@ public class Jugador : MonoBehaviour
 
                 if (vida <= 0)
                 {
-                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                    DerrotaLvl.SetActive(true);
+                    if (BarraDeScore.fillAmount <= 0.59f)
+                    {
+                        imgBronce.SetActive(true);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(true);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 1f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(true);
+                    }
                 }
             }
         }
@@ -110,7 +137,27 @@ public class Jugador : MonoBehaviour
 
                 if (vida <= 0)
                 {
-                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                    DerrotaLvl.SetActive(true);
+                    if (BarraDeScore.fillAmount <= 0.59f)
+                    {
+                        imgBronce.SetActive(true);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(true);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 1f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(true);
+                    }
                 }
             }
         }
@@ -123,7 +170,27 @@ public class Jugador : MonoBehaviour
 
                 if (vida <= 0)
                 {
-                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                    DerrotaLvl.SetActive(true);
+                    if (BarraDeScore.fillAmount <= 0.59f)
+                    {
+                        imgBronce.SetActive(true);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(true);
+                        imgGold.SetActive(false);
+                    }
+
+                    if (BarraDeScore.fillAmount >= 1f)
+                    {
+                        imgBronce.SetActive(false);
+                        imgSilver.SetActive(false);
+                        imgGold.SetActive(true);
+                    }
                 }
             }
         }
@@ -132,7 +199,27 @@ public class Jugador : MonoBehaviour
         {
             if (godMode == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
-                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                DerrotaLvl.SetActive(true);
+                if (BarraDeScore.fillAmount <= 0.59f)
+                {
+                    imgBronce.SetActive(true);
+                    imgSilver.SetActive(false);
+                    imgGold.SetActive(false);
+                }
+
+                if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+                {
+                    imgBronce.SetActive(false);
+                    imgSilver.SetActive(true);
+                    imgGold.SetActive(false);
+                }
+
+                if (BarraDeScore.fillAmount >= 1f)
+                {
+                    imgBronce.SetActive(false);
+                    imgSilver.SetActive(false);
+                    imgGold.SetActive(true);
+                }
             }
         }
 
@@ -143,23 +230,106 @@ public class Jugador : MonoBehaviour
 
             if (vida <= 0)
             {
-                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                DerrotaLvl.SetActive(true);
+                if (BarraDeScore.fillAmount <= 0.59f)
+                {
+                    imgBronce.SetActive(true);
+                    imgSilver.SetActive(false);
+                    imgGold.SetActive(false);
+                }
+
+                if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+                {
+                    imgBronce.SetActive(false);
+                    imgSilver.SetActive(true);
+                    imgGold.SetActive(false);
+                }
+
+                if (BarraDeScore.fillAmount >= 1f)
+                {
+                    imgBronce.SetActive(false);
+                    imgSilver.SetActive(false);
+                    imgGold.SetActive(true);
+                }
             }
         }
 
         if (collision.gameObject.tag == "pasarLVL1")
         {
-            SceneManager.LoadScene("Nivel2");
+            //SceneManager.LoadScene("Nivel2");
+            ResultLvl.SetActive(true);
+            if(BarraDeScore.fillAmount <= 0.59f)
+            {
+                imgBronce.SetActive(true);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(true);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 1f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(true);
+            }
         }
 
         if (collision.gameObject.tag == "pasarLVL2")
         {
-            SceneManager.LoadScene("Nivel3");
+            //SceneManager.LoadScene("Nivel3");
+            ResultLvl.SetActive(true);
+            if (BarraDeScore.fillAmount <= 0.59f)
+            {
+                imgBronce.SetActive(true);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(true);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 1f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(true);
+            }
         }
 
         if (collision.gameObject.tag == "pasarLVL3")
         {
-            SceneManager.LoadScene("Nivel4");
+            //SceneManager.LoadScene("Nivel4");
+            ResultLvl.SetActive(true);
+            if (BarraDeScore.fillAmount <= 0.59f)
+            {
+                imgBronce.SetActive(true);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(true);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 1f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(true);
+            }
         }
     }
 }

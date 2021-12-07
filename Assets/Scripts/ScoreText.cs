@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public static float puntaje = 0; // Variable que acumulará el total de el valor de las monedas recolectadas. 
+    public static float puntaje; // Variable que acumulará el total de el valor de las monedas recolectadas.
     Text score;
 
     void Start()
     {
+        puntaje = 0;
         score = GetComponent<Text>();
     }
 

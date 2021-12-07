@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6012103, g: 0.89419943, b: 1.0263191, a: 1}
+  m_IndirectSpecularColor: {r: 0.6011436, g: 0.8941524, b: 1.0262833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -251,6 +251,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -494,7 +498,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1088924217}
   - {fileID: 2082268958}
@@ -1008,6 +1011,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (9)
@@ -1140,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (16)
@@ -1264,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (18)
@@ -1306,7 +1321,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.934963, y: 1.401813, z: 56.06524}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 305814328}
   - {fileID: 2028210115}
@@ -1390,7 +1404,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 953009109}
   - {fileID: 1146166327}
@@ -1550,7 +1563,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1074773504}
   - {fileID: 1462077365}
@@ -1562,7 +1574,7 @@ Transform:
   - {fileID: 1038371741}
   - {fileID: 457334836}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &346246259
 PrefabInstance:
@@ -1730,6 +1742,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: imgGold
+      value: 
+      objectReference: {fileID: 2842808896598147409}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: ResultLvl
+      value: 
+      objectReference: {fileID: 1511319159}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: imgBronce
+      value: 
+      objectReference: {fileID: 2842808896598147411}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: imgSilver
+      value: 
+      objectReference: {fileID: 2842808896598147410}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: BarraDeScore
       value: 
       objectReference: {fileID: 1413833099}
@@ -1748,6 +1776,14 @@ PrefabInstance:
     - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: jumpHeight
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: maxDashing
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: maxSliding
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4431613693264781935, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: m_RootOrder
@@ -1988,6 +2024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (3)
@@ -2118,7 +2158,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -2151,7 +2190,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.58, y: 8, z: 144}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 2
@@ -2248,7 +2286,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.1, y: 8, z: 188.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 8
@@ -2368,6 +2405,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (25)
@@ -2439,6 +2480,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -2615,6 +2660,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -2796,7 +2845,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.5, y: 9.5, z: 1030}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 4
@@ -2892,7 +2940,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19, y: 8, z: 375.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 6
@@ -3012,6 +3059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (23)
@@ -3052,7 +3103,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 9.5, z: 1252.2}
   m_LocalScale: {x: 52, y: 20, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 6
@@ -3243,6 +3293,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (30)
@@ -3304,6 +3358,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -3502,6 +3560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (1)
@@ -3625,6 +3687,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -3757,6 +3823,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -4142,7 +4212,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 8.48, z: 266.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 4
@@ -4382,7 +4451,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 361342428}
   - {fileID: 1866787402}
@@ -4445,6 +4513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (3)
@@ -4484,7 +4556,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.98, y: 8, z: 128.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 3
@@ -4661,6 +4732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (26)
@@ -4785,6 +4860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (5)
@@ -4908,7 +4987,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30.5, y: 9.5, z: 610}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 3
@@ -5026,6 +5104,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -5172,6 +5254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (27)
@@ -5209,7 +5295,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 965295410}
   - {fileID: 1220086654}
@@ -5572,7 +5657,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14, y: 8, z: 435}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 7
@@ -5859,7 +5943,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.8, y: 8, z: 18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 0
@@ -5987,7 +6070,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 890810045}
   - {fileID: 1298943625}
@@ -6000,7 +6082,7 @@ Transform:
   - {fileID: 1710546355}
   - {fileID: 2111825320}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1108085694
 PrefabInstance:
@@ -6052,6 +6134,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -6178,7 +6264,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1153219589}
   - {fileID: 2100657966}
@@ -6462,6 +6547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (12)
@@ -6580,6 +6669,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -6713,6 +6806,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (15)
@@ -6836,6 +6933,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -6977,6 +7078,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (4)
@@ -7044,6 +7149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda
@@ -7084,7 +7193,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.5, y: 9.5, z: 190}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 0
@@ -7202,6 +7310,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -7345,6 +7457,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -7575,7 +7691,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30.5, y: 9.5, z: 1030}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 5
@@ -7767,6 +7882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (8)
@@ -7804,7 +7923,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 663294262}
   - {fileID: 1825287673}
@@ -7927,7 +8045,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 12.04, z: 82.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 1
@@ -8022,7 +8139,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 674270168}
   - {fileID: 1859960336}
@@ -8068,6 +8184,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7724400452353733994, guid: c73c3fc9996bc894385c9b3bf40e410f, type: 3}
   m_PrefabInstance: {fileID: 105263648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1511319159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1511319159, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 2842808896598147408}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1524143345 stripped
 Transform:
@@ -8256,6 +8377,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -8587,6 +8712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (14)
@@ -8751,7 +8880,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1306387239}
   - {fileID: 1752386620}
@@ -8908,7 +9036,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2005212749}
   - {fileID: 2110071129}
@@ -9007,7 +9134,6 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -9260,7 +9386,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30.5, y: 9.5, z: 190}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 1
@@ -9441,6 +9566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (28)
@@ -9478,7 +9607,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 346246260}
   - {fileID: 1248718073}
@@ -9602,6 +9730,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (22)
@@ -9642,7 +9774,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.5, y: 9.5, z: 610}
   m_LocalScale: {x: 1, y: 20, z: 420}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625859474}
   m_RootOrder: 2
@@ -9954,7 +10085,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1372310575}
   - {fileID: 740497858}
@@ -10090,6 +10220,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -10293,6 +10427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
       value: Moneda (2)
@@ -10333,7 +10471,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.6, y: -20, z: 1157.7}
   m_LocalScale: {x: 141.03506, y: 1, z: 244.05011}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 779663861}
   m_RootOrder: 1
@@ -10750,7 +10887,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -18, y: 8, z: 317.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320923839}
   m_RootOrder: 5
@@ -10871,6 +11007,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -11005,6 +11145,10 @@ PrefabInstance:
     - target: {fileID: 2219412241867340384, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219412241867340385, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219412241867340387, guid: eedcebf87d2d12d48bdf780ad510b833, type: 3}
       propertyPath: m_Name
@@ -11939,8 +12083,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1413833099, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_FillAmount
+    - target: {fileID: 77483351, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511319159, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2842808896121583606, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
@@ -12047,8 +12195,27 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7633581115252787813, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+--- !u!1 &2842808896598147409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8183335228859501068, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 2842808896598147408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2842808896598147410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5614901728781692193, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 2842808896598147408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2842808896598147411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1935729547209031719, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 2842808896598147408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3081483907764229402
 PrefabInstance:
   m_ObjectHideFlags: 0
