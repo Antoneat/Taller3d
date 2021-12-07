@@ -13,6 +13,10 @@ TagManager:
   - pasarLVL1
   - pasarLVL2
   - pasarLVL3
+  - Moneda5
+  - Moneda10
+  - Enemigo2
+  - Enemigo3
   layers:
   - Default
   - TransparentFX

@@ -39,17 +39,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5843599368872645530}
     m_Modifications:
-    - target: {fileID: 863470395726320558, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
-      propertyPath: m_TagString
-      value: obstaculo
-      objectReference: {fileID: 0}
     - target: {fileID: 2768029616474076679, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
       propertyPath: m_Name
       value: Piedra larga
       objectReference: {fileID: 0}
-    - target: {fileID: 2768029616474076679, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
-      propertyPath: m_TagString
-      value: obstaculo
+    - target: {fileID: 2982735571457498168, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.85
       objectReference: {fileID: 0}
     - target: {fileID: 3252114506805079229, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
       propertyPath: m_RootOrder
@@ -97,25 +93,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
---- !u!1 &1772000046944598976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 863470395726320558, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}
-  m_PrefabInstance: {fileID: 1399706234467051630}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &887009602897479370
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772000046944598976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6811185056682236250, guid: d7e22befbb7f2e64dae146c148c9ecf9, type: 3}
 --- !u!4 &4489268105944237267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3252114506805079229, guid: 1c996680484b9bf48a082e4d7ee28808, type: 3}

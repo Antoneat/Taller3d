@@ -66,7 +66,21 @@ public class Jugador : MonoBehaviour
         if (collider.gameObject.CompareTag("Moneda"))
         {
             ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
-            BarraDeScore.fillAmount += (ScoreText.puntaje/1000); 
+            BarraDeScore.fillAmount += (ScoreText.puntaje/3000);
+            Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
+            MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
+        }
+        if (collider.gameObject.CompareTag("Moneda5"))
+        {
+            ScoreText.puntaje += 50;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            BarraDeScore.fillAmount += (ScoreText.puntaje / 3000);
+            Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
+            MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
+        }
+        if (collider.gameObject.CompareTag("Moneda10"))
+        {
+            ScoreText.puntaje += 100;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            BarraDeScore.fillAmount += (ScoreText.puntaje / 3000);
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
             MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
@@ -75,6 +89,32 @@ public class Jugador : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("EnemigoUno"))
+        {
+            if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
+            {
+                vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
+                RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);
+
+                if (vida <= 0)
+                {
+                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                }
+            }
+        }
+        if (collision.gameObject.CompareTag("Enemigo2"))
+        {
+            if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
+            {
+                vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
+                RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);
+
+                if (vida <= 0)
+                {
+                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                }
+            }
+        }
+        if (collision.gameObject.CompareTag("Enemigo3"))
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {

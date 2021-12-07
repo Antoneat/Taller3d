@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 2469648568650332783}
   - component: {fileID: 2469648568650332771}
   - component: {fileID: 2469648568650332770}
-  - component: {fileID: 2469648568650332769}
   - component: {fileID: 2469648568650332768}
   - component: {fileID: 3538723536894877119}
   m_Layer: 0
   m_Name: Enemigo2
-  m_TagString: EnemigoUno
+  m_TagString: Enemigo2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3187084928425983303}
   m_Father: {fileID: 0}
@@ -86,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2469648568650332769
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469648568650332782}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2469648568650332768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +93,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2469648568650332782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cd70eeaaa6440241b7d6d4372a94f29, type: 3}
   m_Name: 
@@ -139,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.22339
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
       propertyPath: m_LocalScale.z
@@ -169,8 +156,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -6675641341723105671, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618163158860587252, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62008b07d21daec4dbf3aab8682a9d01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+--- !u!1 &642658188403358933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6675641341723105671, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+  m_PrefabInstance: {fileID: 3148145496387328684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6333543143363118398
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642658188403358933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6865482140272566840, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}
+--- !u!114 &2700741846314050075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642658188403358933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd70eeaaa6440241b7d6d4372a94f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 0
+  mp: {fileID: 0}
 --- !u!4 &3187084928425983303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48563c1f578918e4d8757a73e25cea6e, type: 3}

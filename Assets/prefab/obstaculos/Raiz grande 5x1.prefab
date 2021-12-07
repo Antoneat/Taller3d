@@ -39,6 +39,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4418905936414314553}
     m_Modifications:
+    - target: {fileID: 2846303807315751769, guid: b5fc3a38caaaadd49912ec96d68008a9, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
+      objectReference: {fileID: 0}
     - target: {fileID: 5856369978985845050, guid: b5fc3a38caaaadd49912ec96d68008a9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -86,6 +90,10 @@ PrefabInstance:
     - target: {fileID: 6489073377511656320, guid: b5fc3a38caaaadd49912ec96d68008a9, type: 3}
       propertyPath: m_Name
       value: Ramas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489073377511656320, guid: b5fc3a38caaaadd49912ec96d68008a9, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fc3a38caaaadd49912ec96d68008a9, type: 3}

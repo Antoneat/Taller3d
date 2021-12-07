@@ -39,9 +39,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6740853915727093827}
     m_Modifications:
+    - target: {fileID: 3010052783804010464, guid: d5489dd3bd3fb6f47806828325913810, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
+      objectReference: {fileID: 0}
     - target: {fileID: 6073122717739202361, guid: d5489dd3bd3fb6f47806828325913810, type: 3}
       propertyPath: m_Name
       value: Rama_Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073122717739202361, guid: d5489dd3bd3fb6f47806828325913810, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 6846527255859129731, guid: d5489dd3bd3fb6f47806828325913810, type: 3}
       propertyPath: m_RootOrder

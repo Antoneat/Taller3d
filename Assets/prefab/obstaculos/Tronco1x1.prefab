@@ -39,9 +39,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5821534148168844726}
     m_Modifications:
+    - target: {fileID: 1144411314684185624, guid: f0fb83cc986795e44afa6c27067df98e, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
+      objectReference: {fileID: 0}
     - target: {fileID: 8244982503850587329, guid: f0fb83cc986795e44afa6c27067df98e, type: 3}
       propertyPath: m_Name
       value: Tronco 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244982503850587329, guid: f0fb83cc986795e44afa6c27067df98e, type: 3}
+      propertyPath: m_TagString
+      value: obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 8730191919451434619, guid: f0fb83cc986795e44afa6c27067df98e, type: 3}
       propertyPath: m_RootOrder
