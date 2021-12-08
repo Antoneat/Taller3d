@@ -17,6 +17,7 @@ TagManager:
   - Moneda10
   - Enemigo2
   - Enemigo3
+  - paredesInvisibles
   layers:
   - Default
   - TransparentFX

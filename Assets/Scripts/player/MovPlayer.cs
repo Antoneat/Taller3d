@@ -82,7 +82,7 @@ public class MovPlayer : MonoBehaviour
     void FixedUpdate()
     {
         //transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
-        rb.transform.position += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
+        rb.transform.positWion += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
         if (isDashing)
         {
             Dash();
@@ -231,12 +231,19 @@ public class MovPlayer : MonoBehaviour
             float bounce = 1200f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;
-            Invoke("StopBounce", 1.5f);
+            Invoke("StopBounce", .5f);
             
             if (ju.vida <= 0)
             {
                 Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
             }
+        }
+        if (other.gameObject.CompareTag("paredesInvisibles"))
+        {
+            float bounce = 700f; //cant d fuerza aplicada al bounce
+            rb.AddForce(other.contacts[0].normal * bounce);
+            isBouncing = true;
+            Invoke("StopBounce", .005f);
         }
     }
 
