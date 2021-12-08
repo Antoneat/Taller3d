@@ -228,7 +228,7 @@ public class MovPlayer : MonoBehaviour
         if (other.gameObject.CompareTag("obstaculo"))
         {
             anim.SetTrigger("Tired");
-            float bounce = 1200f; //cant d fuerza aplicada al bounce
+            float bounce = 800f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;
             Invoke("StopBounce", 1.5f);
