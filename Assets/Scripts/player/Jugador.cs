@@ -223,7 +223,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("obsDesdeA"))
+        if (collision.gameObject.CompareTag("obstaculo"))
         {
             vida--;
             RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);
@@ -283,6 +283,32 @@ public class Jugador : MonoBehaviour
         if (collision.gameObject.tag == "pasarLVL2")
         {
             //SceneManager.LoadScene("Nivel3");
+            ResultLvl.SetActive(true);
+            if (BarraDeScore.fillAmount <= 0.59f)
+            {
+                imgBronce.SetActive(true);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 0.6f && BarraDeScore.fillAmount < 0.99f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(true);
+                imgGold.SetActive(false);
+            }
+
+            if (BarraDeScore.fillAmount >= 1f)
+            {
+                imgBronce.SetActive(false);
+                imgSilver.SetActive(false);
+                imgGold.SetActive(true);
+            }
+        }
+
+        if (collision.gameObject.tag == "pasarLVL3")
+        {
+            //SceneManager.LoadScene("Nivel4");
             ResultLvl.SetActive(true);
             if (BarraDeScore.fillAmount <= 0.59f)
             {

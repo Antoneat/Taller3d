@@ -6,7 +6,6 @@ TagManager:
   tags:
   - EnemigoUno
   - Moneda
-  - walls
   - caida
   - obstaculo
   - obsDesdeA
@@ -18,6 +17,7 @@ TagManager:
   - Enemigo2
   - Enemigo3
   - paredesInvisibles
+  - pasarLVL4
   layers:
   - Default
   - TransparentFX

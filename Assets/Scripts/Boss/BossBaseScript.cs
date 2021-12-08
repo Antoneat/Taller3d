@@ -13,6 +13,8 @@ public class BossBaseScript : MonoBehaviour
     [SerializeField]
     private bool isPlayerClose;
     LayerMask playerLayer;
+
+    public GameObject DerrotaLvl;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +45,21 @@ public class BossBaseScript : MonoBehaviour
 
         yield return null;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "pasarLVL4")
+        {
+            DerrotaLvl.SetActive(true);
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             isPlayerClose = true;
         }
+
     }
     private void OnTriggerExit(Collider other)
     {

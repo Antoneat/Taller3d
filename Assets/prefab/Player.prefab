@@ -359,6 +359,11 @@ MonoBehaviour:
   RecibiendoDmg: {fileID: 630693561}
   particulaDmg: {fileID: 5065959984406371721, guid: c815374544a89cb489381555c457fb1f, type: 3}
   BarraDeScore: {fileID: 0}
+  ResultLvl: {fileID: 0}
+  DerrotaLvl: {fileID: 0}
+  imgBronce: {fileID: 0}
+  imgSilver: {fileID: 0}
+  imgGold: {fileID: 0}
 --- !u!114 &4431613693264781934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,14 +376,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a867679402bb341899fa062bfa0c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoMovSpeed: 18
-  speed: 15
-  jumpHeight: 400
+  AutoMovSpeed: 17
+  speed: 12
+  hmove: 0
+  frontMov: 0
+  jumpHeight: 120
   isGrounded: 0
   NumberJumps: 0
   MaxJumps: 1
   rb: {fileID: 4431613693264781843}
-  dashSpeed: 8
+  dashSpeed: 2
   isDashing: 0
   dashPos: {fileID: 502834242}
   dashVFX: {fileID: 2977785436140431086, guid: c572ecceeaaad9d4493e84290f4f1739, type: 3}
@@ -389,7 +396,7 @@ MonoBehaviour:
   maxTimeForDash: 1
   dashBar: {fileID: 0}
   slideBar: {fileID: 0}
-  slideSpeed: 8
+  slideSpeed: 1.5
   isSliding: 0
   slidePos: {fileID: 5215323073657306735}
   slideVFX: {fileID: 718661294486973496, guid: 8ddb300cc301c164e8a75bea38c50dba, type: 3}
@@ -398,7 +405,8 @@ MonoBehaviour:
   timeForSlide: 0
   maxTimeForSlide: 1
   isBouncing: 0
-  modCRate: 2
+  modCRateD: 0.5
+  modCRateS: 0.5
   anim: {fileID: 2085341915}
 --- !u!114 &4431613693264781933
 MonoBehaviour:

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MovPlayer : MonoBehaviour
 {
-    public float AutoMovSpeed = 1f;
-    public float speed = 5f;
-    Vector3 Vec;
+    public float AutoMovSpeed;
+    public float speed;
 
-    public float jumpHeight = 7f;
+    public float jumpHeight;
     public bool isGrounded;
     public float NumberJumps = 0f;
     public float MaxJumps = 1;
@@ -44,21 +43,19 @@ public class MovPlayer : MonoBehaviour
 
     public bool isBouncing;
 
-    public float modCRate = 0.5f;
-    private float modChange = 0.0f;
+    public float modCRateD;
 
+    public float modCRateS;
     modelChange modCha;
-    Jugador ju;
 
     public Animator anim;
-
+    Vector3 moveF;
+    Vector3 moveS;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         modCha = GetComponent<modelChange>();
         modCha.model1.SetActive(true);
-
-        ju = GetComponent<Jugador>();
 
         currentDashing = maxDashing;
         currentSliding = maxSliding;
@@ -67,7 +64,7 @@ public class MovPlayer : MonoBehaviour
 
         isBouncing = false;
     }
-  
+
     IEnumerator isAttacking()
     {
         dashCollision = true;
@@ -79,25 +76,36 @@ public class MovPlayer : MonoBehaviour
         yield return null;
     }
 
+    void ModelChangeD()
+    {
+        modCha.model3.SetActive(false);
+        modCha.model1.SetActive(true);
+    }
+
+    void ModelChangeS()
+    {
+        modCha.model2.SetActive(false);
+        modCha.model1.SetActive(true);
+    }
+
+    
     void FixedUpdate()
     {
-        //transform.position += transform.forward * Time.deltaTime * AutoMovSpeed;
-        rb.transform.positWion += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
+
+        Move(moveF);
+        MoveLados(moveS);
+
         if (isDashing)
         {
             Dash();
             StartCoroutine(isAttacking());
             modCha.model1.SetActive(false);
             modCha.model3.SetActive(true);
+            Invoke("ModelChangeD", 0.8f);
+
             isDashing = false;
             currentDashing = 0;
             dashBar.SetDash(currentDashing);
-        }
-        else if (Time.time > modChange)
-        {
-            modChange = Time.time + modCRate;
-            modCha.model3.SetActive(false);
-            modCha.model1.SetActive(true);
         }
 
 
@@ -106,26 +114,23 @@ public class MovPlayer : MonoBehaviour
             Slide();
             modCha.model1.SetActive(false);
             modCha.model2.SetActive(true);
-
+            Invoke("ModelChangeS", 1);
+            
+            isSliding = false;
             currentSliding = 0;
             slideBar.SetSlide(currentSliding);
         }
-        else if (Time.time > modChange) 
-        {
-            modChange = Time.time + modCRate;
-            modCha.model1.SetActive(true);
-            modCha.model2.SetActive(false);
-        }
-
-            if (!isBouncing) rb.MovePosition(rb.position + Vec * speed * Time.fixedDeltaTime);
+ 
     }
 
     void Update()
     {
-        Move();
+        moveF = new Vector3(rb.velocity.x, rb.velocity.y, 1);
+        moveS = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y, rb.velocity.z);
+        
         Jump();
-
-        if (Input.GetMouseButtonDown(0) && currentDashing==3)
+      
+        if (Input.GetMouseButtonDown(0) && currentDashing == 3)
         {
             isDashing = true;
         }
@@ -148,11 +153,26 @@ public class MovPlayer : MonoBehaviour
         }
     }
 
-    void Move()
+    void Move(Vector3 direction)
     {
-        Vec = transform.localPosition;
-        Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        transform.localPosition = Vec;
+        //rb.AddForce(Vector3.forward * AutoMovSpeed);
+        if (!isBouncing) rb.MovePosition(rb.position + direction * AutoMovSpeed * Time.deltaTime);
+    }
+
+    void MoveLados(Vector3 direction)
+    {
+        rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+
+        // rb.velocity = new Vector3(hmove, rb.velocity.y, rb.velocity.z);
+        /*if (Input.GetKeyDown(KeyCode.A))
+        {
+            //hmove = -speed;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {     
+            //hmove = speed;
+        }*/
+
     }
 
     void Jump()
@@ -166,11 +186,12 @@ public class MovPlayer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                rb.AddForce(Vector3.up * jumpHeight);
-                NumberJumps += 1;
+               rb.AddForce(Vector3.up * jumpHeight);
+                NumberJumps += 1;  
             }
         }
     }
+
 
     void Dash()
     {
@@ -186,8 +207,10 @@ public class MovPlayer : MonoBehaviour
         GameObject obj = Instantiate(slideVFX);
         obj.transform.position = slidePos.transform.position;
         obj.transform.parent = slidePos.transform;
+
         rb.AddForce(transform.forward * slideSpeed, ForceMode.Impulse);
         isSliding = false;
+        
     }
 
     private void RegeneracionDash()
@@ -212,38 +235,32 @@ public class MovPlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("walls"))
-        {
-            isGrounded = false;
-        }
-        else
-        {
-            isGrounded = true;
-        }
-
-
         NumberJumps = 0;
 
 
         if (other.gameObject.CompareTag("obstaculo"))
         {
             anim.SetTrigger("Tired");
-            float bounce = 1200f; //cant d fuerza aplicada al bounce
-            rb.AddForce(other.contacts[0].normal * bounce);
-            isBouncing = true;
-            Invoke("StopBounce", .5f);
-            
-            if (ju.vida <= 0)
+            if (rb.position.y<= 1.96 && !isBouncing)
             {
-                Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                float bounce = 200f; //cant d fuerza aplicada al bounce
+                rb.AddForce(other.contacts[0].normal * bounce);
+                isBouncing = true;
+                Invoke("StopBounce", .5f);
             }
         }
+
         if (other.gameObject.CompareTag("paredesInvisibles"))
         {
-            float bounce = 700f; //cant d fuerza aplicada al bounce
+            float bounce = 80f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;
             Invoke("StopBounce", .005f);
+            isGrounded = false;
+        }
+        else
+        {
+            isGrounded = true;
         }
     }
 
