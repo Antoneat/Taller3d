@@ -63,6 +63,8 @@ public class MovPlayer : MonoBehaviour
         slideBar.SetMaxSlide(maxSliding);
 
         isBouncing = false;
+        
+        Physics.gravity = new Vector3(0, -7.0F, 0);
     }
 
     IEnumerator isAttacking()
