@@ -32,11 +32,12 @@ public class Jugador : MonoBehaviour
     public GameObject imgSilver;
     public GameObject imgGold;
 
+    public GameObject muerteEnemigoPoint;
+    public GameObject ParticulaMuerteEnemigo;
 
     private void Start()
     {
         maxVida = vida; // Setea la vida maxima y la vida actual a un mismo valor.
-        
     }
 
     private void Update()
@@ -44,8 +45,8 @@ public class Jugador : MonoBehaviour
         if (vida < maxVida) //Cuando la vida este igual o mayor a 1 este empezara con un cuenta atras que activara la regeneracion.
         {
             Regeneracion();
-
         }
+
         if(vida==maxVida)
         {
             RegenDeVida.SetActive(false);
@@ -127,7 +128,16 @@ public class Jugador : MonoBehaviour
                     }
                 }
             }
+
+            if (godMode == false || mp.isDashing == true)
+            {
+                if (collision.gameObject)
+                {
+                    muerteEnemigoPoint = Instantiate(ParticulaMuerteEnemigo, transform.position, Quaternion.identity);
+                }
+            }
         }
+
         if (collision.gameObject.CompareTag("Enemigo2"))
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
@@ -160,7 +170,16 @@ public class Jugador : MonoBehaviour
                     }
                 }
             }
+
+            if (godMode == false || mp.isDashing == true)
+            {
+                if (collision.gameObject)
+                {
+                    muerteEnemigoPoint = Instantiate(ParticulaMuerteEnemigo, transform.position, Quaternion.identity);
+                }
+            }
         }
+
         if (collision.gameObject.CompareTag("Enemigo3"))
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
@@ -191,6 +210,14 @@ public class Jugador : MonoBehaviour
                         imgSilver.SetActive(false);
                         imgGold.SetActive(true);
                     }
+                }
+            }
+
+            if (godMode == false && mp.isDashing == true)
+            {
+                if(collision.gameObject)
+                {
+                    muerteEnemigoPoint = Instantiate(ParticulaMuerteEnemigo, transform.position, Quaternion.identity);
                 }
             }
         }

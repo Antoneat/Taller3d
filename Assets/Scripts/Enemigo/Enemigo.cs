@@ -34,7 +34,7 @@ public class Enemigo : MonoBehaviour
         {
             if(mp.currentDashing == 0)
                 vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
-
+                
                 if (vida <= 0)
                 {
                     Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.

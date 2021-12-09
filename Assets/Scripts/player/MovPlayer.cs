@@ -92,10 +92,8 @@ public class MovPlayer : MonoBehaviour
     
     void FixedUpdate()
     {
-
         Move();
        
-
         if (isDashing)
         {
             Dash();
