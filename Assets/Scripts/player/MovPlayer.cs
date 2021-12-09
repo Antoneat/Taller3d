@@ -47,6 +47,7 @@ public class MovPlayer : MonoBehaviour
 
     public Animator anim;
     Vector3 Vec;
+
    // Vector3 moveF;
     //Vector3 moveS;
     void Start()
@@ -127,6 +128,7 @@ public class MovPlayer : MonoBehaviour
     {
         // moveF = new Vector3(rb.velocity.x, rb.velocity.y, 1);
         //moveS = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y, rb.velocity.z);
+
         MoveLados();
         Jump();
       
@@ -156,15 +158,21 @@ public class MovPlayer : MonoBehaviour
     void Move()
     {
         //rb.AddForce(Vector3.forward * AutoMovSpeed);
-        if (!isBouncing) rb.transform.position += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
+        if (!isBouncing && rb.position.x >= -8 && rb.position.x <= 17)
+        {
+            rb.transform.position += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
+        }
     }
 
     void MoveLados()
     {
+        if (rb.position.x >= -8 && rb.position.x <=17)
+        {
+            Vec = transform.localPosition;
+            Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+            transform.localPosition = Vec;
 
-        Vec = transform.localPosition;
-        Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        transform.localPosition = Vec;
+        }
 
         //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
 
@@ -253,7 +261,7 @@ public class MovPlayer : MonoBehaviour
             anim.SetTrigger("Tired");
             if (rb.position.y<= 4.70 && !isBouncing)
             {
-                float bounce = 700f; //cant d fuerza aplicada al bounce
+                float bounce = 800f; //cant d fuerza aplicada al bounce
                 rb.AddForce(other.contacts[0].normal * bounce);
                 isBouncing = true;
                 Invoke("StopBounce", .5f);
@@ -262,7 +270,7 @@ public class MovPlayer : MonoBehaviour
 
         if (other.gameObject.CompareTag("paredesInvisibles"))
         {
-            float bounce = 700f; //cant d fuerza aplicada al bounce
+            float bounce = 500f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;
             Invoke("StopBounce", .005f);

@@ -225,6 +225,8 @@ GameObject:
   - component: {fileID: 4431613693264781844}
   - component: {fileID: 4431613693264781934}
   - component: {fileID: 4431613693264781933}
+  - component: {fileID: 1212041652341778165}
+  - component: {fileID: 8607294763599844390}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -403,8 +405,6 @@ MonoBehaviour:
   timeForSlide: 0
   maxTimeForSlide: 1
   isBouncing: 0
-  modCRateD: 0.5
-  modCRateS: 0.5
   anim: {fileID: 0}
 --- !u!114 &4431613693264781933
 MonoBehaviour:
@@ -421,6 +421,31 @@ MonoBehaviour:
   model1: {fileID: 4431613694148869347}
   model2: {fileID: 4431613693950784266}
   model3: {fileID: 4431613694666417970}
+--- !u!114 &1212041652341778165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431613693264781845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0d9cb048d570c41851427fdff71b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PCanvas: {fileID: 0}
+--- !u!75 &8607294763599844390
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431613693264781845}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &4431613693950784266
 GameObject:
   m_ObjectHideFlags: 0
