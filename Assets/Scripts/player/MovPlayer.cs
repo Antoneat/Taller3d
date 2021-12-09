@@ -131,7 +131,9 @@ public class MovPlayer : MonoBehaviour
 
         MoveLados();
         Jump();
-      
+
+        anim.SetBool("isGround", isGrounded);
+
         if (Input.GetMouseButtonDown(0) && currentDashing == 3)
         {
             isDashing = true;
@@ -199,6 +201,7 @@ public class MovPlayer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
+                anim.SetTrigger("Jump");
                rb.AddForce(Vector3.up * jumpHeight);
                 Invoke("FallJump", 3.5f);
                 NumberJumps += 1;  
