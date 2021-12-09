@@ -380,12 +380,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoMovSpeed: 17
   speed: 12
-  jumpHeight: 120
+  jumpHeight: 550
   isGrounded: 0
   NumberJumps: 0
   MaxJumps: 1
   rb: {fileID: 4431613693264781843}
-  dashSpeed: 2
+  dashSpeed: 10
   isDashing: 0
   dashPos: {fileID: 502834242}
   dashVFX: {fileID: 2977785436140431086, guid: c572ecceeaaad9d4493e84290f4f1739, type: 3}
@@ -396,7 +396,7 @@ MonoBehaviour:
   maxTimeForDash: 1
   dashBar: {fileID: 0}
   slideBar: {fileID: 0}
-  slideSpeed: 1.5
+  slideSpeed: 10
   isSliding: 0
   slidePos: {fileID: 5215323073657306735}
   slideVFX: {fileID: 718661294486973496, guid: 8ddb300cc301c164e8a75bea38c50dba, type: 3}
@@ -405,7 +405,7 @@ MonoBehaviour:
   timeForSlide: 0
   maxTimeForSlide: 1
   isBouncing: 0
-  anim: {fileID: 0}
+  anim: {fileID: 1025968871523308664}
 --- !u!114 &4431613693264781933
 MonoBehaviour:
   m_ObjectHideFlags: 0
