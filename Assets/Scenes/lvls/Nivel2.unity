@@ -12765,6 +12765,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1212041652341778165, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: PCanvas
+      value: 
+      objectReference: {fileID: 1833716817}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: imgGold
       value: 
@@ -12939,18 +12943,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 834409652, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2336611357202026651, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804475767429617, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel2
-      objectReference: {fileID: 0}
     - target: {fileID: 2842808896121583606, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13047,18 +13039,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2842808896656205726, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_Name
-      value: Resumir
-      objectReference: {fileID: 0}
-    - target: {fileID: 2842808897019626307, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_Name
-      value: Reintentar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2842808897019626309, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel2
-      objectReference: {fileID: 0}
     - target: {fileID: 2842808897495069167, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13066,14 +13046,6 @@ PrefabInstance:
     - target: {fileID: 2842808897495069167, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2842808897850938473, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_Name
-      value: Inicio
-      objectReference: {fileID: 0}
-    - target: {fileID: 7128875165874007139, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Nivel2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
@@ -16288,6 +16260,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833111428}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1833716817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2842808896136623125, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 1535125716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1836712335
 PrefabInstance:
   m_ObjectHideFlags: 0

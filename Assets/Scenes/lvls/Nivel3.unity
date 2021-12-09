@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60141695, g: 0.8943398, b: 1.0265785, a: 1}
+  m_IndirectSpecularColor: {r: 0.6012103, g: 0.89419943, b: 1.0263191, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5889,6 +5889,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794578469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &797147621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2842808896707591706, guid: f7853db5bc7a40f4988f480596bc3aec, type: 3}
+  m_PrefabInstance: {fileID: 1630408847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &802483320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14190,6 +14195,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1212041652341778165, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: PCanvas
+      value: 
+      objectReference: {fileID: 797147621}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: imgGold
       value: 
