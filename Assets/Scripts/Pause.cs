@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    bool active;
-    Canvas canvas;
-    
+    bool active =false;
+    public GameObject PCanvas;
 
     void Start()
     {
-        canvas = GetComponent<Canvas>();
-        canvas.enabled = false;
+        PCanvas.gameObject.SetActive(false);
     }
 
-    public void Paused()
+    void Update()
     {
-        active = !active;
-        canvas.enabled = active;
-        Time.timeScale = (active) ? 0 : 1f;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (active == true)
+            {
+                Time.timeScale = 1.0f;
+                PCanvas.gameObject.SetActive(false);
+                active = false;
+            }
+            else
+            {
+                Time.timeScale = 0.0f;
+                PCanvas.gameObject.SetActive(true);
+                active = true;
+            }
+        }
     }
-}
+    public void Resume()
+    {
+        Time.timeScale = 1.0f;
+        PCanvas.gameObject.SetActive(false);
+    }
+}    
+

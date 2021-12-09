@@ -43,14 +43,12 @@ public class MovPlayer : MonoBehaviour
 
     public bool isBouncing;
 
-    public float modCRateD;
-
-    public float modCRateS;
     modelChange modCha;
 
     public Animator anim;
-    Vector3 moveF;
-    Vector3 moveS;
+    Vector3 Vec;
+   // Vector3 moveF;
+    //Vector3 moveS;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -64,7 +62,7 @@ public class MovPlayer : MonoBehaviour
 
         isBouncing = false;
         
-        Physics.gravity = new Vector3(0, -7.0F, 0);
+     //   Physics.gravity = new Vector3(0, -7.0F, 0);
     }
 
     IEnumerator isAttacking()
@@ -94,8 +92,8 @@ public class MovPlayer : MonoBehaviour
     void FixedUpdate()
     {
 
-        Move(moveF);
-        MoveLados(moveS);
+        Move();
+       
 
         if (isDashing)
         {
@@ -127,9 +125,9 @@ public class MovPlayer : MonoBehaviour
 
     void Update()
     {
-        moveF = new Vector3(rb.velocity.x, rb.velocity.y, 1);
-        moveS = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y, rb.velocity.z);
-        
+        // moveF = new Vector3(rb.velocity.x, rb.velocity.y, 1);
+        //moveS = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y, rb.velocity.z);
+        MoveLados();
         Jump();
       
         if (Input.GetMouseButtonDown(0) && currentDashing == 3)
@@ -155,15 +153,20 @@ public class MovPlayer : MonoBehaviour
         }
     }
 
-    void Move(Vector3 direction)
+    void Move()
     {
         //rb.AddForce(Vector3.forward * AutoMovSpeed);
-        if (!isBouncing) rb.MovePosition(rb.position + direction * AutoMovSpeed * Time.deltaTime);
+        if (!isBouncing) rb.transform.position += rb.transform.forward * AutoMovSpeed * Time.deltaTime;
     }
 
-    void MoveLados(Vector3 direction)
+    void MoveLados()
     {
-        rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+
+        Vec = transform.localPosition;
+        Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        transform.localPosition = Vec;
+
+        //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
 
         // rb.velocity = new Vector3(hmove, rb.velocity.y, rb.velocity.z);
         /*if (Input.GetKeyDown(KeyCode.A))
@@ -189,11 +192,16 @@ public class MovPlayer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W))
             {
                rb.AddForce(Vector3.up * jumpHeight);
+                Invoke("FallJump", 3.5f);
                 NumberJumps += 1;  
             }
         }
     }
 
+    void FallJump()
+    {
+        GetComponent<ConstantForce>().force = new Vector3(0, -5.0f, 0);
+    }
 
     void Dash()
     {
@@ -243,9 +251,9 @@ public class MovPlayer : MonoBehaviour
         if (other.gameObject.CompareTag("obstaculo"))
         {
             anim.SetTrigger("Tired");
-            if (rb.position.y<= 1.96 && !isBouncing)
+            if (rb.position.y<= 4.70 && !isBouncing)
             {
-                float bounce = 200f; //cant d fuerza aplicada al bounce
+                float bounce = 700f; //cant d fuerza aplicada al bounce
                 rb.AddForce(other.contacts[0].normal * bounce);
                 isBouncing = true;
                 Invoke("StopBounce", .5f);
@@ -254,7 +262,7 @@ public class MovPlayer : MonoBehaviour
 
         if (other.gameObject.CompareTag("paredesInvisibles"))
         {
-            float bounce = 80f; //cant d fuerza aplicada al bounce
+            float bounce = 700f; //cant d fuerza aplicada al bounce
             rb.AddForce(other.contacts[0].normal * bounce);
             isBouncing = true;
             Invoke("StopBounce", .005f);
