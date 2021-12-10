@@ -132,12 +132,13 @@ public class MovPlayer : MonoBehaviour
 
         anim.SetBool("isGround", isGrounded);
 
-        if (Input.GetMouseButtonDown(0) && currentDashing == 3)
+        if (Input.GetMouseButtonDown(0) && currentDashing == 3 && !isSliding)
         {
             isDashing = true;
+            anim.SetTrigger("A");
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && isDashing == false && isGrounded == true && currentSliding == 3)
+        if (Input.GetKeyDown(KeyCode.S) && !isDashing && isGrounded == true && currentSliding == 3)
         {
             isSliding = true;
         }
