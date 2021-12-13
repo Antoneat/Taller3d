@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
+    public GameObject enemyObject;
     public int vida;
     public MovPlayer mp;
 
@@ -37,9 +38,23 @@ public class Enemigo : MonoBehaviour
                 
                 if (vida <= 0)
                 {
-                    Destroy(gameObject); // Cuando la vida llegue a 0 el jugador morira.
+                    Destroy(enemyObject); // Cuando la vida llegue a 0 el jugador morira.
                 }
             
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+                vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
+
+            if (vida <= 0)
+            {
+                Destroy(enemyObject); // Cuando la vida llegue a 0 el jugador morira.
+            }
+
         }
     }
 

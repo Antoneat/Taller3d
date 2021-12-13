@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd70eeaaa6440241b7d6d4372a94f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyObject: {fileID: 0}
   vida: 0
   mp: {fileID: 0}
 --- !u!114 &4419196664452015902
@@ -210,5 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd70eeaaa6440241b7d6d4372a94f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyObject: {fileID: 7693608214318641255}
   vida: 0
   mp: {fileID: 0}

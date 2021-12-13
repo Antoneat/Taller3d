@@ -8,6 +8,10 @@ public class ScriptMovementBoss : MonoBehaviour
     public MovPlayer Player;
     public Rigidbody rb;
     public GameObject zPlaceToMove;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
     public Vector3 randomVector;
     public float speed;
     public life lifeBoss;
@@ -56,7 +60,7 @@ public class ScriptMovementBoss : MonoBehaviour
     {
         if(randomVector == Vector3.zero)
         {
-            randomVector = new Vector3(Random.Range(-16, 26), Random.Range(1, 5), zPlaceToMove.transform.position.z);
+            randomVector = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), zPlaceToMove.transform.position.z);
             Debug.Log("Asignado");
             return;
         }
