@@ -2285,6 +2285,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1511319159}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin1
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin5
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: imgBronce
       value: 
       objectReference: {fileID: 2842808896598147411}
@@ -2297,6 +2305,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1240559102}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin10
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: BarraDeScore
       value: 
       objectReference: {fileID: 1413833099}
@@ -2308,6 +2320,10 @@ PrefabInstance:
       propertyPath: dashBar
       value: 
       objectReference: {fileID: 1565250582}
+    - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: jumpVFX
+      value: 
+      objectReference: {fileID: 2977785436140431086, guid: b8be6f9896cc7db4182b944b767226be, type: 3}
     - target: {fileID: 4431613693264781934, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: slideBar
       value: 

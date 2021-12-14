@@ -11,6 +11,8 @@ public class MovPlayer : MonoBehaviour
     public bool isGrounded;
     public float NumberJumps = 0f;
     public float MaxJumps = 1;
+    public GameObject jumpPos;
+    public GameObject jumpVFX;
 
     public Rigidbody rb;
 
@@ -200,6 +202,8 @@ public class MovPlayer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
+                GameObject obj = Instantiate(jumpVFX);
+                obj.transform.position = jumpPos.transform.position;
                 anim.SetTrigger("Jump");
                rb.AddForce(Vector3.up * jumpHeight);
                 Invoke("FallJump", 3.5f);

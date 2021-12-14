@@ -11124,6 +11124,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1535125721}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin1
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin5
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: imgBronce
       value: 
       objectReference: {fileID: 1535125720}
@@ -11135,6 +11143,10 @@ PrefabInstance:
       propertyPath: DerrotaLvl
       value: 
       objectReference: {fileID: 1535125722}
+    - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
+      propertyPath: descCoin10
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 4431613693264781844, guid: 066540b518abe0b4cb3d111df91b99b6, type: 3}
       propertyPath: BarraDeScore
       value: 

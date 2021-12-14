@@ -62,6 +62,37 @@ Transform:
   m_Father: {fileID: 4431613693264781935}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1812786040674439479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7399764047886838083}
+  m_Layer: 0
+  m_Name: jumpPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7399764047886838083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812786040674439479}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4431613693264781935}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2413252316017952259
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +320,7 @@ Transform:
   - {fileID: 630693562}
   - {fileID: 502834243}
   - {fileID: 4048528544740228322}
+  - {fileID: 7399764047886838083}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -386,6 +418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVida: 5
   vida: 5
+  descCoin1: 0
+  descCoin5: 0
+  descCoin10: 0
   tiempo: 0
   maxTiempo: 5
   godMode: 0
@@ -420,6 +455,8 @@ MonoBehaviour:
   isGrounded: 0
   NumberJumps: 0
   MaxJumps: 1
+  jumpPos: {fileID: 1812786040674439479}
+  jumpVFX: {fileID: 2977785436140431086, guid: b8be6f9896cc7db4182b944b767226be, type: 3}
   rb: {fileID: 4431613693264781843}
   dashSpeed: 10
   isDashing: 0

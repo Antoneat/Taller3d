@@ -9,6 +9,10 @@ public class Jugador : MonoBehaviour
     public int maxVida;  // Vida máxima del jugador.
     public int vida;     // Variable de vida donde utilizará posteriormente para la recuperación de vida después de un tiempo.
 
+    public float descCoin1;
+    public float descCoin5;
+    public float descCoin10;
+
     public float tiempo;
     public float maxTiempo; //Tiempo de espera para regenerar la vida.
 
@@ -74,21 +78,21 @@ public class Jugador : MonoBehaviour
         if (collider.gameObject.CompareTag("Moneda"))
         {
             ScoreText.puntaje += 10;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
-            BarraDeScore.fillAmount += (ScoreText.puntaje/3000);
+            BarraDeScore.fillAmount += descCoin1;
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
             MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
         if (collider.gameObject.CompareTag("Moneda5"))
         {
-            ScoreText.puntaje += 50;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
-            BarraDeScore.fillAmount += (ScoreText.puntaje / 3000);
+            ScoreText.puntaje += 30;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            BarraDeScore.fillAmount += descCoin5;
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
             MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
         if (collider.gameObject.CompareTag("Moneda10"))
         {
-            ScoreText.puntaje += 100;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
-            BarraDeScore.fillAmount += (ScoreText.puntaje / 3000);
+            ScoreText.puntaje += 50;  // Incrementará en 10 el puntaje total cada que se agarre una moneda.
+            BarraDeScore.fillAmount += descCoin10;
             Destroy(collider.gameObject); // Se autodestruirá la moneda cuando sea "agarrada".
             MonedaParticula = Instantiate(particulaMoneda, transform.position, Quaternion.identity);
         }
