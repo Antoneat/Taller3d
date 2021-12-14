@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4486159526397861156}
   - component: {fileID: 6932550363367077491}
   - component: {fileID: 7872702011257114805}
+  - component: {fileID: 5234314422400158986}
   m_Layer: 0
   m_Name: default (1)
   m_TagString: obstaculo
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5234314422400158986
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277943161420648168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: e4c3b7c502c505b4b8a4ee398b559ec1, type: 3}
 --- !u!1 &7224698532977318829
 GameObject:
   m_ObjectHideFlags: 0

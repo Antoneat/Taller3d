@@ -262,7 +262,7 @@ public class MovPlayer : MonoBehaviour
         NumberJumps = 0;
 
 
-        if (other.gameObject.CompareTag("obstaculo"))
+        if (other.gameObject.CompareTag("obstaculo") || other.gameObject.CompareTag("EnemigoUno") && !dashCollision || other.gameObject.CompareTag("Enemigo2") && !dashCollision || other.gameObject.CompareTag("Enemigo3") && !dashCollision)
         {
             anim.SetTrigger("Tired");
             if (rb.position.y<= 4.70 && !isBouncing)

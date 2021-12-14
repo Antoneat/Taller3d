@@ -100,7 +100,7 @@ public class Jugador : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("EnemigoUno"))
+        if (collision.gameObject.CompareTag("EnemigoUno") && !gameObject.GetComponent<MovPlayer>().dashCollision)
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
@@ -142,7 +142,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Enemigo2"))
+        if (collision.gameObject.CompareTag("Enemigo2") && !gameObject.GetComponent<MovPlayer>().dashCollision)
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
@@ -184,7 +184,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Enemigo3"))
+        if (collision.gameObject.CompareTag("Enemigo3") && !gameObject.GetComponent<MovPlayer>().dashCollision)
         {
             if (godMode == false || mp.isDashing == false) // Si en godmode esta desactivado, hará lo de abajo.
             {
@@ -254,7 +254,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("obstaculo"))
+        if (collision.gameObject.CompareTag("obstaculo") && !gameObject.GetComponent<MovPlayer>().dashCollision)
         {
             vida--;
             RecibiendoDmg = Instantiate(particulaDmg, transform.position, Quaternion.identity);

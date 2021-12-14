@@ -7,6 +7,7 @@ public class Enemigo : MonoBehaviour
     public GameObject enemyObject;
     public int vida;
     public MovPlayer mp;
+    public GameObject deathVFX;
 
     void Start()
     {
@@ -35,11 +36,13 @@ public class Enemigo : MonoBehaviour
         {
             if(mp.currentDashing == 0)
                 vida--;  // Disminuira en 1 la vida cada que choque con un enemigo.
-                
-                if (vida <= 0)
-                {
-                    Destroy(enemyObject); // Cuando la vida llegue a 0 el jugador morira.
-                }
+
+            if (vida <= 0)
+            {
+                GameObject obj = Instantiate(deathVFX);
+                obj.transform.position = transform.position;
+                Destroy(enemyObject); // Cuando la vida llegue a 0 el jugador morira.
+            }
             
         }
     }
@@ -52,6 +55,8 @@ public class Enemigo : MonoBehaviour
 
             if (vida <= 0)
             {
+                GameObject obj = Instantiate(deathVFX);
+                obj.transform.position = transform.position;
                 Destroy(enemyObject); // Cuando la vida llegue a 0 el jugador morira.
             }
 

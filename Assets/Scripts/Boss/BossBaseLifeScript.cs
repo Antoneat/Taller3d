@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBaseLifeScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BossBaseLifeScript : MonoBehaviour
     public ScriptMovementBoss leftHand;
     public ScriptMovementBoss rightHand;
     public ScriptMovementBoss head;
+    public Spawner spawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,8 @@ public class BossBaseLifeScript : MonoBehaviour
         }
         if (life == 0)
         {
-            Die();
+            spawner.canSpawn = false;
+            StartCoroutine(Die());
         }
     }
 
@@ -71,8 +74,11 @@ public class BossBaseLifeScript : MonoBehaviour
         yield return null;
     }
 
-    public void Die()
+    public IEnumerator Die()
     {
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene("Creditos");
         //AQUI SE COLOCA LA TRANSICION A VICTORIA
     }
 

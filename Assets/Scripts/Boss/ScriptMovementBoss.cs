@@ -16,7 +16,8 @@ public class ScriptMovementBoss : MonoBehaviour
     public float speed;
     public life lifeBoss;
     public life readyToStart;
-    public bool isMyTurn; 
+    public bool isMyTurn;
+    public Animator anim;
     public enum life
     {
         One,
@@ -87,7 +88,29 @@ public class ScriptMovementBoss : MonoBehaviour
 
     public void Die()
     {
+        if (lifeBoss == life.One && isMyTurn)
+        {
+            if(anim)
+            {
+                anim.SetTrigger("TimeToDie");
+                StartCoroutine(TimeToDie());
+            }
+        }
+        else
+        {
+            bossMain.life--;
+            gameObject.SetActive(false);
+        }
+    }
+
+    public IEnumerator TimeToDie()
+    {
+
+        yield return new WaitForSeconds(1.5f);
+
         bossMain.life--;
         gameObject.SetActive(false);
+
+        yield return null;
     }
 }
